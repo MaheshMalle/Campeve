@@ -10,141 +10,134 @@ class form extends StatefulWidget {
 }
 
 class _formState extends State<form> {
-  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  final formKey = GlobalKey<FormState>(); //key for form
+  String name = "";
   @override
   Widget build(BuildContext context) {
+    final double height = MediaQuery.of(context).size.height;
+    final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
     return Scaffold(
-      resizeToAvoidBottomInset: false,
-      appBar: AppBar(
-        title: Text("Basic Details"),
-        backgroundColor: Colors.yellow,
-      ),
-      body: Column(
-        children: [
-          SizedBox(
-            height: 100,
-          ),
-          Container(
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
-                border: Border.all(
-                  color: Colors.grey,
-                )),
-            child: Form(
-              key: _formKey,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Container(
-                    margin: EdgeInsets.all(10),
-                    padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        border: Border.all(color: Colors.grey)),
-                    child: TextFormField(
-                      decoration: const InputDecoration(
-                        border: InputBorder.none,
-                        hintText: 'Enter your Name',
+        resizeToAvoidBottomInset: false,
+        key: _scaffoldKey,
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+        ),
+        backgroundColor: Color(0xFFffffff),
+        body: Container(
+          padding: const EdgeInsets.only(left: 40, right: 40),
+          child: Form(
+            key: formKey, //key for form
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(height: height * 0.04),
+                Text(
+                  "Here to Get",
+                  style: TextStyle(fontSize: 30, color: Color(0xFF363f93)),
+                ),
+                Text(
+                  "Welcomed !",
+                  style: TextStyle(fontSize: 30, color: Color(0xFF363f93)),
+                ),
+                SizedBox(
+                  height: height * 0.05,
+                ),
+                TextFormField(
+                  decoration: InputDecoration(labelText: "Enter Your name"),
+                  // validator: (value) {
+                  //   if (value!.isEmpty ||
+                  //       RegExp(r'[a-z A-Z] + $').hasMatch(value)) {
+                  //     return "Enter Correct name";
+                  //   } else {
+                  //     return null;
+                  //   }
+                  // },
+                ),
+                SizedBox(
+                  height: height * 0.05,
+                ),
+                TextFormField(
+                  decoration:
+                      InputDecoration(labelText: "Enter Your College name"),
+                  // validator: (value) {
+                  //   if (value!.isEmpty ||
+                  //       RegExp(r'[a-z A-Z] + $').hasMatch(value)) {
+                  //     return "Enter Correct name";
+                  //   } else {
+                  //     return null;
+                  //   }
+                  // },
+                ),
+                SizedBox(
+                  height: height * 0.05,
+                ),
+                TextFormField(
+                  decoration: InputDecoration(labelText: "Enter Your year"),
+                  // validator: (value) {
+                  //   if (value!.isEmpty ||
+                  //       RegExp(r'[a-z A-Z] + $').hasMatch(value)) {
+                  //     return "Enter Correct year";
+                  //   } else {
+                  //     return null;
+                  //   }
+                  // },
+                ),
+                SizedBox(
+                  height: height * 0.05,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    TextButton(
+                      style: TextButton.styleFrom(
+                        foregroundColor: Colors.black,
                       ),
-                      // validator: (String? value) {
-                      //   if (value == null || value.isEmpty) {
-                      //     return 'Please enter some text';
-                      //   }
-                      //   return null;
-                      // },
-                    ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.all(10),
-                    padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        border: Border.all(color: Colors.grey)),
-                    child: TextFormField(
-                      decoration: const InputDecoration(
-                        border: InputBorder.none,
-                        hintText: 'Enter your College',
+                      onPressed: () {},
+                      child: Text(
+                        "Skip",
+                        style: TextStyle(
+                          color: Color(0xFF363f93),
+                          fontSize: 25,
+                        ),
                       ),
-                      // validator: (String? value) {
-                      //   if (value == null || value.isEmpty) {
-                      //     return 'Please enter some text';
-                      //   }
-                      //   return null;
-                      // },
                     ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.all(10),
-                    padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        border: Border.all(color: Colors.grey)),
-                    child: TextFormField(
-                      decoration: const InputDecoration(
-                        border: InputBorder.none,
-                        hintText: 'Enter your Year',
+                    InkWell(
+                      onTap: () {
+                        // Perform some action when the button is tapped
+                      },
+                      child: Container(
+                        margin: EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                            color: Color(0xFF363f93),
+                            borderRadius: BorderRadius.circular(30),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.grey,
+                                  offset: Offset(5.0, 5.0),
+                                  blurRadius: 10.0,
+                                  spreadRadius: 2.0)
+                            ]),
+                        child: Padding(
+                          padding: EdgeInsets.all(15.0),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.arrow_forward,
+                                size: 20.0,
+                                color: Colors.white,
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
-                      // validator: (String? value) {
-                      //   if (value == null || value.isEmpty) {
-                      //     return 'Please enter some text';
-                      //   }
-                      //   return null;
-                      // },
-                    ),
-                  ),
-                ],
-              ),
+                    )
+                  ],
+                )
+              ],
             ),
           ),
-          SizedBox(
-            height: 50,
-          ),
-          Row(
-            children: [
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 16.0),
-                  child: TextButton(
-                    style: TextButton.styleFrom(
-                        foregroundColor: Colors.black87,
-                        textStyle: const TextStyle(fontSize: 20)),
-                    onPressed: () {
-                      // Validate will return true if the form is valid, or false if
-                      // the form is invalid.
-                      // if (_formKey.currentState!.validate()) {
-                      //   // Process data.
-                      // }
-                    },
-                    child: const Text('Skip -->'),
-                  ),
-                ),
-              ),
-              SizedBox(
-                width: 20,
-              ),
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 16.0),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.yellow,
-                    ),
-                    onPressed: () {
-                      // Validate will return
-                      //true if the form is valid, or false if
-                      // the form is invalid.
-                      // if (_formKey.currentState!.validate()) {
-                      //   // Process data.
-                      // }
-                    },
-                    child: const Text('Submit'),
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ],
-      ),
-    );
+        ));
   }
 }
