@@ -20,8 +20,16 @@ class _MainPageState extends State<MainPage> {
               width: 20,
             ),
             Icon(Icons.location_on_outlined),
-            SizedBox(width: 10.0),
-            Text("Chennai"),
+            //SizedBox(width: 10.0),
+            Text(
+              "Semancherri,Chennai",
+              style: TextStyle(
+                color: Colors.black54,
+                decoration: TextDecoration.underline,
+                decorationColor: Colors.grey,
+                decorationThickness: 1,
+              ),
+            ),
           ],
         ),
         Container(
@@ -29,10 +37,15 @@ class _MainPageState extends State<MainPage> {
           margin: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
           child: TextField(
             decoration: InputDecoration(
+              filled: true,
+              fillColor: Colors.grey[300],
               hintText: 'Search College name/Branch',
-              contentPadding: EdgeInsets.fromLTRB(20, 0, 20, 20),
+              contentPadding: EdgeInsets.fromLTRB(10, 0, 20, 20),
               suffixIcon: IconButton(
                 icon: Icon(Icons.search),
+                iconSize: 20,
+                padding: EdgeInsets.fromLTRB(0, 0, 0, 2),
+                color: Colors.black,
                 onPressed: () {},
               ),
               border: OutlineInputBorder(
