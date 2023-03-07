@@ -55,6 +55,89 @@ class _MainPageState extends State<MainPage> {
             style: TextStyle(fontSize: 12.0, height: 1.2, color: Colors.black),
           ),
         ),
+        Column(
+          children: [
+            Row(
+              children: [
+                SizedBox(
+                  width: 5,
+                ),
+                InkWell(
+                  onTap: () {
+                    // Handle the onTap event
+                  },
+                  child: Container(
+                    margin: EdgeInsets.all(3),
+                    child: Image(
+                      image: AssetImage('assets/images/offcampus.png'),
+                      width: 190.0,
+                      height: 130.0,
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: 5,
+                ),
+                InkWell(
+                  onTap: () {
+                    // Handle the onTap event
+                  },
+                  child: Container(
+                    margin: EdgeInsets.all(3),
+                    child: Image(
+                      image: AssetImage('assets/images/incampus.png'),
+                      width: 190.0,
+                      height: 130.0,
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 3,
+            ),
+            Row(
+              children: [
+                SizedBox(
+                  width: 5,
+                ),
+                InkWell(
+                  onTap: () {
+                    // Handle the onTap event
+                  },
+                  child: Container(
+                    margin: EdgeInsets.all(3),
+                    child: Image(
+                      image: AssetImage('assets/images/ed-tech-zone.png'),
+                      width: 190.0,
+                      height: 130.0,
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: 6,
+                ),
+                InkWell(
+                  onTap: () {
+                    // Handle the onTap event
+                  },
+                  child: Container(
+                    margin: EdgeInsets.all(3),
+                    child: Image(
+                      image: AssetImage('assets/images/funzone.png'),
+                      width: 190.0,
+                      height: 130.0,
+                      fit: BoxFit.fill,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        )
       ]),
       bottomNavigationBar: BottomAppBar(
         shape: CircularNotchedRectangle(),
