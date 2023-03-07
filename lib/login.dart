@@ -14,7 +14,7 @@ class Login extends StatelessWidget {
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         title: Text("campeve"),
-        backgroundColor: Colors.yellow,
+        backgroundColor: Color(0xFF363f93),
       ),
       body: Column(children: [
         Container(
@@ -61,7 +61,7 @@ class Login extends StatelessWidget {
               margin: EdgeInsets.all(5),
               decoration: BoxDecoration(
                 color: Colors.white,
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(30),
                 border: Border.all(
                   color: Colors.grey,
                 ),
@@ -113,7 +113,7 @@ class Login extends StatelessWidget {
                   },
                   child: Text("Login"),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.yellow,
+                    backgroundColor: Color(0xFF363f93),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30),
                     ),

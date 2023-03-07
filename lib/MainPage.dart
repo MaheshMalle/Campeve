@@ -14,6 +14,9 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(children: [
+        SizedBox(
+          height: 40,
+        ),
         Row(
           children: [
             SizedBox(
@@ -137,6 +140,157 @@ class _MainPageState extends State<MainPage> {
               ],
             ),
           ],
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Container(
+          padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
+          decoration: BoxDecoration(
+            color: Color.fromARGB(255, 16, 25, 113),
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(20.0),
+              topRight: Radius.circular(20.0),
+            ),
+          ),
+          child: Text(
+            "EVENTS NEAR YOU",
+            style: TextStyle(fontSize: 25, color: Colors.grey),
+          ),
+          height: 40,
+          width: double.infinity,
+        ),
+        Expanded(
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: [
+              Container(
+                  color: Color.fromARGB(255, 16, 25, 113),
+                  child: ListTile(
+                    leading: ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Image.asset('assets/images/holi.jpeg')),
+                    title: Text(
+                      "HOLIFEST'23",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    subtitle: Text(
+                      "This fest is conducted in sathyabama university",
+                      style: TextStyle(color: Colors.white70),
+                    ),
+                    trailing: Container(
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        child: Text("Register"),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white,
+                          foregroundColor: Colors.black,
+                        ),
+                      ),
+                    ),
+                  )),
+              Container(
+                  color: Color.fromARGB(255, 16, 25, 113),
+                  child: ListTile(
+                    leading: ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Image.asset('assets/images/Hackathon.jpeg')),
+                    title: Text(
+                      "Web Hackathon",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    subtitle: Text(
+                      "This event is conducted in sathyabama university",
+                      style: TextStyle(color: Colors.white70),
+                    ),
+                    trailing: Container(
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        child: Text("Register"),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white,
+                          foregroundColor: Colors.black,
+                        ),
+                      ),
+                    ),
+                  )),
+              Container(
+                  color: Color.fromARGB(255, 16, 25, 113),
+                  child: ListTile(
+                    leading: ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Image.asset('assets/images/coding.jpeg')),
+                    title: Text(
+                      "Coding Contest",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    subtitle: Text(
+                      "This contest is conducted in sathyabama university",
+                      style: TextStyle(color: Colors.white70),
+                    ),
+                    trailing: Container(
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        child: Text("Register"),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white,
+                          foregroundColor: Colors.black,
+                        ),
+                      ),
+                    ),
+                  )),
+              Container(
+                  color: Color.fromARGB(255, 16, 25, 113),
+                  child: ListTile(
+                    leading: ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Image.asset('assets/images/yoga.jpeg')),
+                    title: Text(
+                      "Yoga event",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    subtitle: Text(
+                      "This event is conducted in sathyabama university",
+                      style: TextStyle(color: Colors.white70),
+                    ),
+                    trailing: Container(
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        child: Text("Register"),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white,
+                          foregroundColor: Colors.black,
+                        ),
+                      ),
+                    ),
+                  )),
+              Container(
+                  color: Color.fromARGB(255, 16, 25, 113),
+                  child: ListTile(
+                    leading: ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Image.asset('assets/images/hacker.jpeg')),
+                    title: Text(
+                      "Cyber Workshop",
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    subtitle: Text(
+                      "This workshop is conducted in sathyabama university",
+                      style: TextStyle(color: Colors.white70),
+                    ),
+                    trailing: Container(
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        child: Text("Register"),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.white,
+                          foregroundColor: Colors.black,
+                        ),
+                      ),
+                    ),
+                  )),
+            ],
+          ),
         )
       ]),
       bottomNavigationBar: BottomAppBar(

@@ -64,6 +64,11 @@ flutter:
     - assets/images/funzone.png
     - assets/images/incampus.png
     - assets/images/offcampus.png
+    - assets/images/holi.jpeg
+    - assets/images/Hackathon.jpeg
+    - assets/images/yoga.jpeg
+    - assets/images/hacker.jpeg
+    - assets/images/coding.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
