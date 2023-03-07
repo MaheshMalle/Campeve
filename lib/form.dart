@@ -1,3 +1,4 @@
+import 'package:campeve/MainPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -104,7 +105,12 @@ class _formState extends State<form> {
                     ),
                     InkWell(
                       onTap: () {
-                        // Perform some action when the button is tapped
+                        Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => MainPage(),
+                      ),
+                    );
                       },
                       child: Container(
                         margin: EdgeInsets.all(10),
